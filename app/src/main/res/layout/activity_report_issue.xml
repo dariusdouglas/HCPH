@@ -151,8 +151,9 @@
         android:background="@android:color/darker_gray"
         android:gravity="left|top|center"
         android:hint="Please describe the complaint in as much detail as possible,\nincluding date, time, address (if not already entered), and any\nother information that will help our \ninvestigation"
-        android:inputType="textAutoCorrect|textCapSentences"
+        android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
         android:lines="5"
+        android:maxLength="1000"
         android:paddingLeft="10dp"
         android:textSize="13dp" />
 
@@ -162,9 +163,25 @@
         android:layout_below="@id/descriptionTextField"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="@color/colorPrimaryDark"
         android:layout_marginTop="20dp"
+        android:background="@color/colorPrimaryDark"
         android:text="Submit Issue"
         android:textColor="#ffffff" />
+
+    <!--<TableRow-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<EditText-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="test2" />-->
+
+    <!--<EditText-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="50dp"-->
+    <!--android:text="test" />-->
+    <!--</TableRow>-->
 
 </RelativeLayout>
