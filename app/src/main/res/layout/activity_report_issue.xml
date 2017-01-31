@@ -35,7 +35,7 @@
         android:textSize="25dp" />
 
     <EditText
-        android:id="@+id/enter_business_navbar"
+        android:id="@+id/enter_business_field"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/report_an_issue_nav_view"
@@ -45,14 +45,14 @@
         android:background="@android:color/darker_gray"
         android:hint="Enter a Business, Place or Address"
         android:paddingLeft="15dp"
-        android:textSize="15dp" />
+        android:textSize="13dp" />
 
 
     <TextView
-        android:id="@+id/enter_business_field"
+        android:id="@+id/choose_category_field"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@id/enter_business_navbar"
+        android:layout_below="@id/enter_business_field"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -61,27 +61,110 @@
         android:gravity="center_vertical|left"
         android:paddingLeft="10dp"
         android:text="Category:"
-        android:textSize="15dp" />
+        android:textSize="13dp" />
+
+    <!--<Spinner-->
+    <!--android:id="@+id/spinnPhoneTypes"-->
+    <!--android:layout_width="120dp"-->
+    <!--style="@android:style/Widget.Spinner.DropDown"-->
+    <!--android:layout_height="135dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@drawable/downarrow"-->
+    <!--android:gravity="center_vertical" -->
+    <!--android:layout_alignRight="@+id/choose_category_field"-->
+    <!--android:layout_below="@+id/enter_business_field" />-->
 
     <EditText
         android:id="@+id/emailAddressField"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/enter_business_field"
+        android:layout_below="@+id/choose_category_field"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="0dp"
         android:background="@android:color/darker_gray"
-        android:gravity="center"
         android:hint="Email Address (optional)"
-        android:textSize="15dp" />
+        android:paddingLeft="10dp"
+        android:textSize="13dp" />
 
     <!--<EditText-->
     <!--android:layout_width="wrap_content"-->
     <!--android:layout_height="50dp"-->
     <!--android:layout_alignRight="@id/emailAddressField"-->
-    <!--android:layout_below="@+id/enter_business_field"-->
+    <!--android:layout_below="@+id/choose_category_field"-->
     <!--android:background="@android:color/darker_gray"-->
     <!--android:text="Testing" />-->
+
+    <EditText
+        android:id="@+id/firstNameField"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/emailAddressField"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/darker_gray"
+        android:hint="First Name"
+        android:paddingLeft="10dp"
+        android:textSize="13dp" />
+
+    <EditText
+        android:id="@+id/lastNameField"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/firstNameField"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/darker_gray"
+        android:hint="Last Name"
+        android:paddingLeft="10dp"
+        android:textSize="13dp" />
+
+    <EditText
+        android:id="@+id/contactNumberField"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/firstNameField"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/darker_gray"
+        android:hint="Contact Number"
+        android:paddingLeft="10dp"
+        android:textSize="13dp" />
+
+    <EditText
+        android:id="@+id/descriptionTextField"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/contactNumberField"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/darker_gray"
+        android:gravity="left|top|center"
+        android:hint="Please describe the complaint in as much detail as possible,\nincluding date, time, address (if not already entered), and any\nother information that will help our \ninvestigation"
+        android:inputType="textAutoCorrect|textCapSentences"
+        android:lines="5"
+        android:paddingLeft="10dp"
+        android:textSize="13dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/descriptionTextField"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="20dp"
+        android:text="Submit Issue"
+        android:textColor="#ffffff" />
+
 </RelativeLayout>
