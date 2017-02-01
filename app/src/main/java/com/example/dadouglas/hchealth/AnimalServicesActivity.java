@@ -18,6 +18,4 @@ public class AnimalServicesActivity extends AppCompatActivity {
         myWebView.loadUrl("http://publichealth.harriscountytx.gov/Services-Programs/Services/Shelter-Services/AdoptPet");
     }
 
-
-
 }
