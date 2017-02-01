@@ -92,7 +92,9 @@
                 android:gravity="center"
                 android:padding="5dip"
                 android:text="Animal Services"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="startAnimalServicesActivity"/>
         </TableRow>
 
         <!-- Row 4  -->

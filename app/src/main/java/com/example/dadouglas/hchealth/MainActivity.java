@@ -18,4 +18,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ReportIssueActivity.class);
         startActivity(intent);
     }
+
+    public void startAnimalServicesActivity(View view){
+        Intent intent = new Intent(this, AnimalServicesActivity.class);
+        startActivity(intent);
+    }
 }
