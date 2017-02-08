@@ -4,138 +4,130 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <GridLayout
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bghomemobileappblurcolwhite"
-        android:columnCount="2"
-        android:columnOrderPreserved="true"
-        android:padding="3dp"
-        android:rowOrderPreserved="true">
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:weightSum="5">
 
-        <!--android:layout_marginTop="50dp"-->
-        <TextView
+
+        <!-- Row 1 with single column -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_weight=".83"
+                android:drawableTop="@drawable/hcphrbgstacked"
+                android:gravity="center"
+                android:padding="5dip"/>
+
+
+        </TableRow>
+
+        <!-- Row 2 -->
+
+
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:layout_columnSpan="2"
-            android:background="@drawable/drawable"
-            android:layout_marginTop="5dp"/>
+            android:layout_height="match_parent"
+            android:layout_weight=".3"
+            android:gravity="center_horizontal">
 
-        <TextView
-            android:layout_column="0"
-            android:layout_row="3"
-            android:background="@drawable/foodestablishment" />
-
-        <TextView
-            android:layout_column="0"
-            android:layout_gravity="bottom|center"
-            android:layout_row="3"
-            android:width="206dp"
-            android:height="30dp"
-            android:background="@android:color/white"
-            android:gravity="center"
-            android:text="Food Establishments"
-            android:textColor="@color/colorPrimary"
-            android:textSize="12dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_column="1"
-            android:layout_row="3"
-            android:background="@drawable/reportissues" />
-
-        <TextView
-            android:layout_column="1"
-            android:layout_gravity="bottom|center"
-            android:layout_row="3"
-            android:width="207dp"
-            android:height="30dp"
-            android:background="@android:color/white"
-            android:gravity="center"
-            android:text="Report Issues"
-            android:textColor="@color/colorPrimary"
-            android:textSize="12dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_column="1"
-            android:layout_marginTop="3dp"
-            android:layout_row="4"
-            android:background="@drawable/shelterservices" />
-
-        <TextView
-            android:layout_column="1"
-            android:layout_gravity="bottom|center"
-            android:layout_row="4"
-            android:width="207dp"
-            android:height="30dp"
-            android:background="@android:color/white"
-            android:gravity="center"
-            android:text="Animal Services"
-            android:textColor="@color/colorPrimary"
-            android:textSize="12dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_column="1"
-            android:layout_marginTop="3dp"
-            android:layout_row="5"
-            android:background="@drawable/mc" />
-
-        <TextView
-            android:layout_column="1"
-            android:layout_gravity="bottom|center"
-            android:layout_row="5"
-            android:width="207dp"
-            android:height="30dp"
-            android:background="@android:color/white"
-            android:gravity="center"
-            android:text="Mosquito Concerns"
-            android:textColor="@color/colorPrimary"
-            android:textSize="12dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_column="0"
-            android:layout_marginTop="3dp"
-            android:layout_row="5"
-            android:background="@drawable/preparednessresponse" />
-        <TextView
-            android:layout_column="0"
-            android:layout_gravity="bottom|center"
-            android:layout_row="5"
-            android:width="207dp"
-            android:height="30dp"
-            android:background="@android:color/white"
-            android:gravity="center"
-            android:text="Preparedness &amp; Response"
-            android:textColor="@color/colorPrimary"
-            android:textSize="12dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_column="0"
-            android:layout_marginTop="3dp"
-            android:layout_row="4"
-            android:background="@drawable/healthwellness" />
-
-        <TextView
-            android:layout_column="0"
-            android:layout_gravity="bottom|center"
-            android:layout_row="4"
-            android:width="207dp"
-            android:height="30dp"
-            android:background="@android:color/white"
-            android:gravity="center"
-            android:text="Health &amp; Wellness"
-            android:textColor="@color/colorPrimary"
-            android:textSize="12dp"
-            android:textStyle="bold" />
+            <!-- Column 1 -->
+            <TextView
+                android:layout_weight=".3"
+                android:background="@android:color/black"
+                android:drawableTop="@drawable/foodestablishment"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="Food Establishments"
+                android:textColor="#000000"/>
 
 
-    </GridLayout>
+            <!-- Column 2 -->
+            <TextView
+                android:id="@+id/reportIssuesId"
+                android:layout_weight=".3"
+                android:background="@android:color/black"
+                android:drawableTop="@drawable/reportissues"
+                android:gravity="center"
+                android:onClick="startReportIssueActivity"
+                android:padding="5dip"
+                android:text="Report Issues"
+                android:textColor="#000000"/>
+
+
+        </TableRow>
+
+        <!-- Row 3  -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:gravity="center_horizontal">
+
+            <!-- Column 1 -->
+            <TextView
+                android:layout_weight=".3"
+                android:background="@android:color/black"
+                android:drawableTop="@drawable/healthwellness"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="Health &amp; Wellness"
+                android:textColor="#000000"/>
+
+            <!-- Column 2 -->
+            <TextView
+                android:layout_weight=".3"
+                android:background="@android:color/black"
+                android:clickable="true"
+                android:drawableTop="@drawable/shelterservices"
+                android:gravity="center"
+                android:onClick="startAnimalServicesActivity"
+                android:padding="5dip"
+                android:text="Animal Services"
+                android:textColor="#000000"/>
+        </TableRow>
+
+        <!-- Row 4  -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:gravity="center_horizontal">
+
+            <!-- Column 1 -->
+            <TextView
+                android:layout_weight=".3"
+                android:background="@android:color/black"
+                android:drawableTop="@drawable/preparednessresponse"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="Preparedness &amp; Response"
+                android:textColor="#000000"/>
+
+            <!-- Column 2 -->
+            <TextView
+                android:layout_weight=".3"
+                android:background="@android:color/black"
+                android:drawableTop="@drawable/mc"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="Mosquito Concerns"
+                android:textColor="#000000"/>
+
+
+        </TableRow>
+
+    </TableLayout>
+
 
 </LinearLayout>
+
+
