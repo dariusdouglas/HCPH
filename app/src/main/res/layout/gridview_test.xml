@@ -13,7 +13,7 @@
         android:padding="3dp"
         android:rowOrderPreserved="true">
 
-
+        <!--android:layout_marginTop="50dp"-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="220dp"
@@ -22,34 +22,44 @@
 
         <TextView
             android:layout_column="0"
+            android:layout_row="3"
+            android:background="@drawable/foodestablishment" />
+
+        <TextView
+            android:layout_column="0"
             android:layout_gravity="bottom|center"
             android:layout_row="3"
-            android:background="@drawable/foodestablishment"
-            android:gravity="bottom|center"
+            android:width="206dp"
+            android:height="30dp"
+            android:background="@android:color/white"
+            android:gravity="center"
             android:text="Food Establishments"
             android:textColor="@color/colorPrimary"
-            android:textSize="12dp" />
+            android:textSize="12dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_column="1"
             android:layout_row="3"
             android:background="@drawable/reportissues" />
-        <!--<TextView -->
-        <!--android:text="testinggg"-->
-        <!--android:textSize="20dp"-->
-        <!--android:gravity="center"-->
-        <!--android:layout_column="0"-->
-        <!--android:layout_row="5"-->
-        <!--android:background="#fff"/>-->
-
-        <TextView
-            android:layout_column="0"
-            android:layout_row="4"
-            android:background="@drawable/healthwellness" />
 
         <TextView
             android:layout_column="1"
+            android:layout_gravity="bottom|center"
+            android:layout_row="3"
+            android:width="207dp"
+            android:height="30dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="Report Issues"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_column="1"
+            android:layout_marginTop="3dp"
             android:layout_row="4"
             android:background="@drawable/shelterservices" />
 
@@ -63,6 +73,13 @@
             android:layout_column="0"
             android:layout_row="5"
             android:background="@drawable/preparednessresponse" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_column="0"
+            android:layout_marginTop="3dp"
+            android:layout_row="4"
+            android:background="@drawable/healthwellness" />
 
 
     </GridLayout>
