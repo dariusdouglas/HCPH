@@ -5,20 +5,20 @@
         android:background="@drawable/bghomemobileappblurcolwhite"
         android:columnCount="2"
         android:columnOrderPreserved="true"
-        android:padding="10dp"
-        android:rowOrderPreserved="true">
+        android:rowOrderPreserved="true"
+    android:layout_weight="100">
 
         <!--android:layout_marginTop="50dp"-->
-        <TextView
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="200dp"
             android:layout_columnSpan="2"
-            android:background="@drawable/drawable" />
+            android:src="@drawable/drawable"/>
 
-        <TextView
+        <ImageView
             android:layout_column="0"
             android:layout_row="3"
-            android:background="@drawable/foodestablishment"
+            android:src="@drawable/foodestablishment"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content" />
 
@@ -35,11 +35,11 @@
             android:textSize="12sp"
             android:textStyle="bold" />
 
-        <TextView
+        <ImageView
             android:id="@+id/reportIssuesId"
             android:layout_column="1"
             android:layout_row="3"
-            android:background="@drawable/reportissues"
+            android:src="@drawable/reportissues"
             android:onClick="startReportIssueActivity"/>
 
         <TextView
@@ -55,11 +55,11 @@
             android:textSize="12dp"
             android:textStyle="bold" />
 
-        <TextView
+        <ImageView
             android:layout_column="1"
             android:layout_marginTop="3dp"
             android:layout_row="4"
-            android:background="@drawable/shelterservices"
+            android:src="@drawable/shelterservices"
             android:onClick="startAnimalServicesActivity"/>
 
         <TextView
@@ -75,11 +75,11 @@
             android:textSize="12dp"
             android:textStyle="bold" />
 
-        <TextView
+        <ImageView
             android:layout_column="1"
             android:layout_marginTop="3dp"
             android:layout_row="5"
-            android:background="@drawable/mc" />
+            android:src="@drawable/mc" />
 
         <TextView
             android:layout_column="1"
@@ -94,12 +94,12 @@
             android:textSize="12dp"
             android:textStyle="bold" />
 
-        <TextView
+        <ImageView
             android:id="@+id/textView2"
             android:layout_column="0"
             android:layout_marginTop="3dp"
             android:layout_row="5"
-            android:background="@drawable/preparednessresponse" />
+            android:src="@drawable/preparednessresponse" />
 
         <TextView
             android:layout_column="0"
@@ -114,12 +114,12 @@
             android:textSize="12dp"
             android:textStyle="bold" />
 
-        <TextView
+        <ImageView
             android:id="@+id/textView3"
             android:layout_column="0"
             android:layout_marginTop="3dp"
             android:layout_row="4"
-            android:background="@drawable/healthwellness" />
+            android:src="@drawable/healthwellness" />
 
         <TextView
             android:layout_column="0"
