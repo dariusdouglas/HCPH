@@ -1,32 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-<GridLayout
-    android:id="@+id/gridLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_weight="100"
     android:background="@drawable/bghomemobileappblurcolwhite"
     android:columnCount="2"
     android:columnOrderPreserved="true"
-    android:padding="10dp"
+    android:padding="5dp"
     android:rowOrderPreserved="true">
 
-
     <!--android:layout_marginTop="50dp"-->
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_columnSpan="2"
-        android:background="@drawable/drawable" />
+        android:src="@drawable/drawable" />
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_column="0"
         android:layout_row="3"
-        android:background="@drawable/foodestablishment" />
+        android:onClick="startMapsActivity"
+        android:src="@drawable/foodestablishment" />
 
     <TextView
         android:layout_column="0"
@@ -41,12 +37,12 @@
         android:textSize="12sp"
         android:textStyle="bold" />
 
-    <TextView
+    <ImageView
         android:id="@+id/reportIssuesId"
         android:layout_column="1"
         android:layout_row="3"
-        android:background="@drawable/reportissues"
-        android:onClick="startReportIssueActivity" />
+        android:onClick="startReportIssueActivity"
+        android:src="@drawable/reportissues" />
 
     <TextView
         android:layout_column="1"
@@ -61,12 +57,12 @@
         android:textSize="12dp"
         android:textStyle="bold" />
 
-    <TextView
+    <ImageView
         android:layout_column="1"
         android:layout_marginTop="3dp"
         android:layout_row="4"
-        android:background="@drawable/shelterservices"
-        android:onClick="startAnimalServicesActivity" />
+        android:onClick="startAnimalServicesActivity"
+        android:src="@drawable/shelterservices" />
 
     <TextView
         android:layout_column="1"
@@ -81,11 +77,11 @@
         android:textSize="12dp"
         android:textStyle="bold" />
 
-    <TextView
+    <ImageView
         android:layout_column="1"
         android:layout_marginTop="3dp"
         android:layout_row="5"
-        android:background="@drawable/mc" />
+        android:src="@drawable/mc" />
 
     <TextView
         android:layout_column="1"
@@ -100,12 +96,12 @@
         android:textSize="12dp"
         android:textStyle="bold" />
 
-    <TextView
+    <ImageView
         android:id="@+id/textView2"
         android:layout_column="0"
         android:layout_marginTop="3dp"
         android:layout_row="5"
-        android:background="@drawable/preparednessresponse" />
+        android:src="@drawable/preparednessresponse" />
 
     <TextView
         android:layout_column="0"
@@ -120,12 +116,12 @@
         android:textSize="12dp"
         android:textStyle="bold" />
 
-    <TextView
+    <ImageView
         android:id="@+id/textView3"
         android:layout_column="0"
         android:layout_marginTop="3dp"
         android:layout_row="4"
-        android:background="@drawable/healthwellness" />
+        android:src="@drawable/healthwellness" />
 
     <TextView
         android:layout_column="0"
@@ -140,26 +136,5 @@
         android:textSize="12dp"
         android:textStyle="bold" />
 
-</GridLayout>
-    <android.support.v4.widget.DrawerLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/drawer_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <!-- The main content view -->
-        <FrameLayout
-            android:id="@+id/content_frame"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-        <!-- The navigation drawer -->
-        <ListView android:id="@+id/left_drawer"
-            android:layout_width="240dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:choiceMode="singleChoice"
-            android:divider="@android:color/transparent"
-            android:dividerHeight="0dp"
-            android:background="#000"/>
-    </android.support.v4.widget.DrawerLayout>
 
-</LinearLayout>
+</GridLayout>

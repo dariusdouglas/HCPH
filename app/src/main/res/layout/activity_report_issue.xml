@@ -37,7 +37,7 @@
     <EditText
         android:id="@+id/enter_business_field"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_below="@id/report_an_issue_nav_view"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -51,7 +51,7 @@
     <TextView
         android:id="@+id/choose_category_field"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_below="@id/enter_business_field"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="20dp"
@@ -78,7 +78,7 @@
     <EditText
         android:id="@+id/emailAddressField"
         android:layout_width="200dp"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/choose_category_field"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="20dp"
@@ -91,7 +91,7 @@
 
     <!--<EditText-->
     <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="60dp"-->
+    <!--android:layout_height="50dp"-->
     <!--android:layout_alignRight="@id/emailAddressField"-->
     <!--android:layout_below="@+id/choose_category_field"-->
     <!--android:background="@android:color/darker_gray"-->
@@ -100,7 +100,7 @@
     <EditText
         android:id="@+id/firstNameField"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/emailAddressField"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="20dp"
@@ -114,7 +114,7 @@
     <EditText
         android:id="@+id/lastNameField"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_below="@id/firstNameField"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="20dp"
@@ -128,7 +128,7 @@
     <EditText
         android:id="@+id/contactNumberField"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_below="@id/firstNameField"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="20dp"
@@ -159,7 +159,7 @@
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_below="@id/descriptionTextField"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -211,7 +211,7 @@
     <!--<EditText-->
     <!--android:layout_width="100dp"-->
     <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginLeft="60dp"-->
+    <!--android:layout_marginLeft="50dp"-->
     <!--android:text="test" />-->
     <!--</TableRow>-->
 
