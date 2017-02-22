@@ -1,28 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_weight="100"
     android:background="@drawable/bghomemobileappblurcolwhite"
-    android:orientation="vertical">
+    android:columnCount="2"
+    android:columnOrderPreserved="true"
+    android:padding="5dp"
+    android:rowOrderPreserved="true">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/vpPager"
+    <!--android:layout_marginTop="50dp"-->
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="200dp"
+        android:layout_columnSpan="2"
+        android:src="@drawable/drawable" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/drawable" />
-    </android.support.v4.view.ViewPager>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_row="3"
+        android:onClick="startMapsActivity"
+        android:src="@drawable/foodestablishment" />
+
+    <TextView
+        android:layout_column="0"
+        android:layout_gravity="bottom|center"
+        android:layout_row="3"
+        android:width="206dp"
+        android:height="30dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="Food Establishments"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/reportIssuesId"
+        android:layout_column="1"
+        android:layout_row="3"
+        android:onClick="startReportIssueActivity"
+        android:src="@drawable/reportissues" />
+
+    <TextView
+        android:layout_column="1"
+        android:layout_gravity="bottom|center"
+        android:layout_row="3"
+        android:width="207dp"
+        android:height="30dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="Report Issues"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_column="1"
+        android:layout_marginTop="3dp"
+        android:layout_row="4"
+        android:onClick="startAnimalServicesActivity"
+        android:src="@drawable/shelterservices" />
+
+    <TextView
+        android:layout_column="1"
+        android:layout_gravity="bottom|center"
+        android:layout_row="4"
+        android:width="207dp"
+        android:height="30dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="Animal Services"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_column="1"
+        android:layout_marginTop="3dp"
+        android:layout_row="5"
+        android:src="@drawable/mc" />
+
+    <TextView
+        android:layout_column="1"
+        android:layout_gravity="bottom|center"
+        android:layout_row="5"
+        android:width="207dp"
+        android:height="30dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="Mosquito Concerns"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/textView2"
+        android:layout_column="0"
+        android:layout_marginTop="3dp"
+        android:layout_row="5"
+        android:src="@drawable/preparednessresponse" />
+
+    <TextView
+        android:layout_column="0"
+        android:layout_gravity="bottom|center"
+        android:layout_row="5"
+        android:width="207dp"
+        android:height="30dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="Preparedness &amp; Response"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/textView3"
+        android:layout_column="0"
+        android:layout_marginTop="3dp"
+        android:layout_row="4"
+        android:src="@drawable/healthwellness" />
+
+    <TextView
+        android:layout_column="0"
+        android:layout_gravity="bottom|center"
+        android:layout_row="4"
+        android:width="207dp"
+        android:height="30dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="Health &amp; Wellness"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12dp"
+        android:textStyle="bold" />
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-
-    </LinearLayout>
-</LinearLayout>
+</GridLayout>

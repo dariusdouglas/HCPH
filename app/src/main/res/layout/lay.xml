@@ -4,12 +4,12 @@
     android:layout_height="match_parent"
     android:background="@drawable/bghomemobileappblurcolwhite"
     android:orientation="vertical"
-    android:weightSum="10">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="9"
+        android:layout_weight="50"
         android:gravity="center">
 
         <ImageView
@@ -22,7 +22,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="10"
         android:background="#000">
 
         <View
@@ -59,7 +59,7 @@
             android:layout_marginRight="6dp"
             android:layout_marginTop="5dp"
             android:layout_toRightOf="@+id/left"
-            android:background="@drawable/foodestablishment"
+            android:background="@drawable/reportissues"
             android:gravity="center"
             android:text="Right"
             android:textSize="18sp" />
@@ -82,7 +82,7 @@
             android:layout_marginRight="3dp"
             android:layout_marginTop="5dp"
             android:layout_toLeftOf="@+id/spacer"
-            android:background="@drawable/foodestablishment"
+            android:background="@drawable/healthwellness"
             android:gravity="center"
             android:text="Left2"
             android:textSize="18sp" />
@@ -98,7 +98,7 @@
             android:layout_marginRight="6dp"
             android:layout_marginTop="5dp"
             android:layout_toRightOf="@+id/left"
-            android:background="@drawable/foodestablishment"
+            android:background="@drawable/shelterservices"
             android:gravity="center"
             android:text="Right2"
             android:textSize="18sp" />
@@ -121,7 +121,7 @@
             android:layout_marginRight="3dp"
             android:layout_marginTop="5dp"
             android:layout_toLeftOf="@+id/spacer"
-            android:background="@drawable/foodestablishment"
+            android:background="@drawable/preparednessresponse"
             android:gravity="center"
             android:text="Left2"
             android:textSize="18sp" />
@@ -138,7 +138,7 @@
             android:layout_marginRight="6dp"
             android:layout_marginTop="5dp"
             android:layout_toRightOf="@+id/left"
-            android:background="@drawable/foodestablishment"
+            android:background="@drawable/mc"
             android:gravity="center"
             android:text="Right2"
             android:textSize="18sp" />
