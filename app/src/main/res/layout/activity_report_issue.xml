@@ -75,6 +75,14 @@
     <!--android:layout_alignRight="@+id/choose_category_field"-->
     <!--android:layout_below="@+id/enter_business_field" />-->
 
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/choose_category_field"
+        android:background="@android:drawable/btn_dropdown"/>
+
+
     <EditText
         android:id="@+id/emailAddressField"
         android:layout_width="200dp"
