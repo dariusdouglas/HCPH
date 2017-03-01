@@ -16,7 +16,6 @@ import java.net.URL;
  */
 
 public class UploadServiceRequest extends AsyncTask<JSONObject, Integer, Void> {
-    // http://appsqa.harriscountytx.gov/PublicHealthMobile/publichealth.svc/UploadServiceRequest
     @Override
     protected Void doInBackground(JSONObject... params) {
         try {
@@ -29,6 +28,7 @@ public class UploadServiceRequest extends AsyncTask<JSONObject, Integer, Void> {
             connection.setDoOutput(true);
             connection.connect();
 
+            // Get the JSON object that was sent with the execute request (ReportIssueActivity.java)
             JSONObject serviceRequest = params[0];
 
             DataOutputStream wr = new DataOutputStream(connection.getOutputStream());
@@ -36,10 +36,12 @@ public class UploadServiceRequest extends AsyncTask<JSONObject, Integer, Void> {
             wr.flush();
             wr.close();
 
+            // Log Response Status
             int code = connection.getResponseCode();
             String message = connection.getResponseMessage();
-            System.out.println("########### passing" + code + "-" + message);
+            Log.d(ReportIssueActivity.class.getSimpleName(), "########### passing" + code + "-" + message);
 
+            connection.disconnect();
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -49,14 +51,14 @@ public class UploadServiceRequest extends AsyncTask<JSONObject, Integer, Void> {
         return null;
     }
 
-    @Override
-    protected void onPostExecute(Void result) {
-        Log.d(ReportIssueActivity.class.getSimpleName(), "RESULT: " + result + "");
-        return;
-
-    }
-
-    protected void onCancelled() {
-        Log.d(ReportIssueActivity.class.getSimpleName(), "RESULT: cancelled");
-    }
+//    @Override
+//    protected void onPostExecute(Void result) {
+//        Log.d(ReportIssueActivity.class.getSimpleName(), "RESULT: " + result + "");
+//        return;
+//
+//    }
+//
+//    protected void onCancelled() {
+//        Log.d(ReportIssueActivity.class.getSimpleName(), "RESULT: cancelled");
+//    }
 }

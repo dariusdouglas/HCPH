@@ -82,22 +82,7 @@ public class ReportIssueActivity extends AppCompatActivity {
     }
 
     private void SubmitRequest() {
-         ServiceRequest serviceRequest;
-        //  EditText firstNameField, lastNameField, emailField, placeField, subjectField, descriptionField, contactNumberField;
-
-            /*
-    http://appsqa.harriscountytx.gov/PublicHealthMobile/publichealth.svc/UploadServiceRequest
-    string ImageBytes
-    string fileName (if you decide to pass an image it needs to be Base64 string, if not pass an empty string)
-    string Place
-    string Subject
-    string Email
-    string FirstName
-    string LastName
-    string ContactNumber
-    string Description
-    string ReceivedDevice (You can pass 1”)
-*/
+        ServiceRequest serviceRequest;
         String firstName;
         String lastName;
         String email;
@@ -106,10 +91,11 @@ public class ReportIssueActivity extends AppCompatActivity {
         String description;
         String contactNumber;
 
-        String recievedDevice = "1";
+        String receivedDevice = "1";
         String imageBytes = "";
         String fileName = "";
 
+        // Get values from fields on form
         firstNameField = (EditText) findViewById(R.id.firstNameField);
         firstName = getFieldValue(firstNameField);
 
@@ -126,24 +112,23 @@ public class ReportIssueActivity extends AppCompatActivity {
         subject = spinner.getSelectedItem().toString();
 
         descriptionField = (EditText) findViewById(R.id.descriptionTextField);
-        description = descriptionField.getText().toString();
+        description = getFieldValue(descriptionField);
 
         contactNumberField = (EditText) findViewById(R.id.contactNumberField);
-        contactNumber = contactNumberField.getText().toString();
-        serviceRequest = new ServiceRequest(contactNumber, description, email, firstName, lastName, imageBytes, place, recievedDevice, subject, fileName);
+        contactNumber = getFieldValue(contactNumberField);
+
+        // Create ServiceRequest object
+        serviceRequest = new ServiceRequest(contactNumber, description, email, firstName, lastName, imageBytes, place, receivedDevice, subject, fileName);
         JSONObject serviceRequestAsJSONObject = serviceRequest.toJsonObject();
 
+        // Submit Request
         UploadServiceRequest submitServiceRequest = new UploadServiceRequest();
         submitServiceRequest.execute(serviceRequestAsJSONObject);
-
-        Log.d(ReportIssueActivity.class.getSimpleName(), submitServiceRequest.getStatus()+"");
-        Log.d(ReportIssueActivity.class.getSimpleName(), serviceRequestAsJSONObject + "");
     }
 
+    // Get the value of EditText Fields
     public String getFieldValue(EditText fieldName) {
         return fieldName.getText().toString();
     }
-
-
 }
 

@@ -15,7 +15,7 @@ public class ServiceRequest {
     private String lastName;
     private String imageBytes;
     private String place;
-    private String recievedDevice;
+    private String receivedDevice;
     private String subject;
     private String fileName;
 
@@ -47,8 +47,8 @@ public class ServiceRequest {
         return place;
     }
 
-    public String getRecievedDevice() {
-        return recievedDevice;
+    public String getreceivedDevice() {
+        return receivedDevice;
     }
 
     public String getSubject() {
@@ -87,8 +87,8 @@ public class ServiceRequest {
         this.place = place;
     }
 
-    public void setRecievedDevice(String recievedDevice) {
-        this.recievedDevice = recievedDevice;
+    public void setreceivedDevice(String receivedDevice) {
+        this.receivedDevice = receivedDevice;
     }
 
     public void setSubject(String subject) {
@@ -108,7 +108,7 @@ public class ServiceRequest {
             this.lastName = object.getString("LastName");
             this.imageBytes = object.getString("ImageBytes");
             this.place = object.getString("Place");
-            this.recievedDevice = object.getString("RecievedDevice");
+            this.receivedDevice = object.getString("receivedDevice");
             this.subject = object.getString("Subject");
             this.fileName = object.getString("fileName");
         } catch (JSONException e) {
@@ -117,7 +117,7 @@ public class ServiceRequest {
     }
 
 
-    public ServiceRequest(String contactNumber, String description, String email, String firstName, String lastName, String imageBytes, String place, String recievedDevice, String subject, String fileName) {
+    public ServiceRequest(String contactNumber, String description, String email, String firstName, String lastName, String imageBytes, String place, String receivedDevice, String subject, String fileName) {
         this.contactNumber = contactNumber;
         this.description = description;
         this.email = email;
@@ -125,7 +125,7 @@ public class ServiceRequest {
         this.lastName = lastName;
         this.imageBytes = imageBytes;
         this.place = place;
-        this.recievedDevice = recievedDevice;
+        this.receivedDevice = receivedDevice;
         this.subject = subject;
         this.fileName = fileName;
     }
@@ -141,12 +141,13 @@ public class ServiceRequest {
                 ", lastName='" + lastName + '\'' +
                 ", imageBytes='" + imageBytes + '\'' +
                 ", place='" + place + '\'' +
-                ", recievedDevice='" + recievedDevice + '\'' +
+                ", receivedDevice='" + receivedDevice + '\'' +
                 ", subject='" + subject + '\'' +
                 ", fileName='" + fileName + '\'' +
                 '}';
     }
 
+    // Return ServiceRequest object as JSON object
     public JSONObject toJsonObject() {
         JSONObject serviceRequestJsonObject = new JSONObject();
         try {
@@ -157,7 +158,7 @@ public class ServiceRequest {
             serviceRequestJsonObject.put("ImageBytes", this.getImageBytes());
             serviceRequestJsonObject.put("LastName", this.getLastName());
             serviceRequestJsonObject.put("Place", this.getPlace());
-            serviceRequestJsonObject.put("RecievedDate", this.getRecievedDevice());
+            serviceRequestJsonObject.put("ReceivedDevice", this.getreceivedDevice());
             serviceRequestJsonObject.put("Subject", this.getSubject());
             serviceRequestJsonObject.put("fileName", this.getFileName());
 
