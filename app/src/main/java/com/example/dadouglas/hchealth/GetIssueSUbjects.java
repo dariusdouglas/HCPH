@@ -28,7 +28,8 @@ public class GetIssueSubjects extends AsyncTask<String, Void, JSONArray> {
 
             InputStream is = conn.getInputStream();
             BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
-            String webPage = "", data = "";
+            String webPage = "";
+            String data = "";
 
             while ((data = reader.readLine()) != null) {
                 webPage += data + "\n";
@@ -36,6 +37,7 @@ public class GetIssueSubjects extends AsyncTask<String, Void, JSONArray> {
             JSONObject jObject = new JSONObject(webPage);
             JSONArray jsonArray = jObject.getJSONArray("GetReportIssueSubjectResult");
 
+            conn.disconnect();
             return jsonArray;
 
         } catch (MalformedURLException e) {

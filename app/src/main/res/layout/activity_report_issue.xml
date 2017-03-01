@@ -48,7 +48,7 @@
         android:textSize="13dp" />
 
 
-   />
+    />
 
     <!--<Spinner-->
     <!--android:id="@+id/spinnPhoneTypes"-->
@@ -65,17 +65,17 @@
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="fill_parent"
-        android:background="@android:drawable/btn_dropdown"
         android:layout_height="50dp"
         android:layout_below="@id/enter_business_field"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="5dp"
+        android:background="@android:drawable/btn_dropdown"
         android:gravity="center_vertical|left"
         android:paddingLeft="10dp"
         android:text="Category:"
-        android:textSize="13dp"/>
+        android:textSize="13dp" />
 
 
     <EditText
@@ -132,7 +132,7 @@
         android:id="@+id/contactNumberField"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@id/firstNameField"
+        android:layout_below="@id/lastNameField"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -161,6 +161,7 @@
         android:textSize="13dp" />
 
     <Button
+        android:id="@+id/submitIssueButton"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/descriptionTextField"
