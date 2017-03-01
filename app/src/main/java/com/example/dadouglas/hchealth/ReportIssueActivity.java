@@ -3,7 +3,6 @@ package com.example.dadouglas.hchealth;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -18,23 +17,11 @@ import java.util.concurrent.ExecutionException;
 
 
 public class ReportIssueActivity extends AppCompatActivity {
-    /*
-    http://appsqa.harriscountytx.gov/PublicHealthMobile/publichealth.svc/UploadServiceRequest
-    string ImageBytes
-    string fileName (if you decide to pass an image it needs to be Base64 string, if not pass an empty string)
-    string Place
-    string Subject
-    string Email
-    string FirstName
-    string LastName
-    string ContactNumber
-    string Description
-    string ReceivedDevice (You can pass 1”)
-*/
+
     Spinner spinner;
     JSONArray subjectsArray;
     Button submitIssueButton;
-    EditText firstNameField, lastNameField, emailField, placeField, subjectField, descriptionField, contactNumberField;
+    EditText firstNameField, lastNameField, emailField, placeField, descriptionField, contactNumberField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
