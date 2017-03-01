@@ -48,20 +48,7 @@
         android:textSize="13dp" />
 
 
-    <TextView
-        android:id="@+id/choose_category_field"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@id/enter_business_field"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="5dp"
-        android:background="@android:color/darker_gray"
-        android:gravity="center_vertical|left"
-        android:paddingLeft="10dp"
-        android:text="Category:"
-        android:textSize="13dp" />
+   />
 
     <!--<Spinner-->
     <!--android:id="@+id/spinnPhoneTypes"-->
@@ -78,16 +65,24 @@
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/choose_category_field"
-        android:background="@android:drawable/btn_dropdown"/>
+        android:background="@android:drawable/btn_dropdown"
+        android:layout_height="50dp"
+        android:layout_below="@id/enter_business_field"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="10dp"
+        android:text="Category:"
+        android:textSize="13dp"/>
 
 
     <EditText
         android:id="@+id/emailAddressField"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/choose_category_field"
+        android:layout_below="@+id/spinner"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="10dp"
@@ -182,8 +177,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/emailAddressField"
         android:layout_alignBottom="@+id/emailAddressField"
-        android:layout_alignEnd="@+id/choose_category_field"
-        android:layout_alignRight="@+id/choose_category_field"
+        android:layout_alignEnd="@+id/spinner"
+        android:layout_alignRight="@+id/spinner"
         android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/emailAddressField"
         android:layout_toRightOf="@+id/emailAddressField"
