@@ -187,6 +187,7 @@
         android:background="@android:color/darker_gray"
         android:drawableRight="@drawable/camera2"
         android:gravity="left|center"
+        android:onClick="ChooseGetPhotoOption"
         android:padding="10dp"
         android:text="Attach Image"
         android:textSize="13dp" />

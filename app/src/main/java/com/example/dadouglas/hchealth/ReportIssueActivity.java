@@ -1,5 +1,10 @@
 package com.example.dadouglas.hchealth;
 
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.provider.MediaStore;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -116,6 +121,28 @@ public class ReportIssueActivity extends AppCompatActivity {
     // Get the value of EditText Fields
     public String getFieldValue(EditText fieldName) {
         return fieldName.getText().toString();
+    }
+
+
+    // Choose to either select photo from gallery or take new photo
+    public void ChooseGetPhotoOption(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(ReportIssueActivity.this);
+
+        builder.setTitle("Upload Photo");
+
+        builder.setPositiveButton("Select from Gallery", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                Intent choosePhoto = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(choosePhoto, 1);
+            }
+        });
+        builder.setNegativeButton("Take Photo", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                Intent takePhoto = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(takePhoto, 0);
+            }
+        });
+        builder.show();
     }
 }
 
